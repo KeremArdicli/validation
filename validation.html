@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="post">
+
+        <label for="email">Email adresinizi girin:</label>
+        <input type="email" name="email" id="email" onblur="emailCheck(this)">
+
+        <label for="tcno">TC Kimlik No giriniz</label>
+        <input type="number" minlength="11" maxlength="11" id="TCNO" name="TCNO" onblur="TCNOKontrol(this)" />
+
+        <label for="tel">Telefon no giriniz (başında 0 olmadan)</label>
+        <input type="tel" minlength="15" maxlength="15" id="gsm" placeholder="(532) 532 32 32" onblur="gsmCheck(this)" />
+
+    </form>
+</body>
+  
+<script src="https://unpkg.com/imask"></script>
+<script src="./validation.js"></script>
+
+</html>
