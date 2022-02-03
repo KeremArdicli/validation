@@ -18,7 +18,8 @@
         <input type="number" minlength="11" maxlength="11" id="TCNO" name="TCNO" onblur="TCNOKontrol(this)" />
 
         <label for="tel">Telefon no giriniz (başında 0 olmadan)</label>
-        <input type="tel" minlength="15" maxlength="15" id="gsm" placeholder="(532) 532 32 32" onblur="gsmCheck(this)" />
+        <input type="tel" minlength="15" maxlength="15" id="gsm" placeholder="(532) 532 32 32" onkeyup="gsmCheck(this)" />
+        <input type="number" name="gsm" style="display: none;">        
 
     </form>
 </body>
