@@ -99,17 +99,17 @@ function emailCheck(e) {
 /////////////GSM input maskelemek scripti///////////////////
 
 /* HTML Kullanımı
-    <input type="tel" min id="gsm" placeholder="(532) 532 32 32" onblur="gsmCheck(this)" />
+    <input type="tel" min id="gsm" placeholder="(532) 532 32 32" onkeyup="gsmCheck(this)" />
+    <input type="number" name="gsm" style="display: none;" >
     <script src="https://unpkg.com/imask"></script>
-
-    global 'gsmNo' değişkeni ile tel no değerine ulaşabilirsiniz.
 */
 
 function gsmCheck(e) {
   IMask(e, {
     mask: `(000) 000 00 00`
   });
-  window.gsmNo = e.value.match(/\d+/g).join("");
+  let gsmNo = e.value.match(/\d+/g).join("");
+  document.querySelector('input[name="gsm"]').value = gsmNo;
   console.log(gsmNo);
 }
 
